@@ -1,0 +1,485 @@
+:root {
+  --first-clr: rgb(214, 28, 28);
+  --second-clr: rgb(170, 20, 20);
+  --third-clr: rgb(0, 0, 0);
+  --fourth-clr: rgb(20, 20, 20);
+  --fifth-clr: rgb(255, 255, 255);
+  --sixth-clr: rgba(255, 255, 255, 0.5);
+  --seventh-clr: rgb(13, 250, 5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--third-clr);
+  color: var(--fifth-clr);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Buttony ── */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  color: var(--fifth-clr);
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.btn--red {
+  background-color: var(--first-clr);
+}
+
+.btn--red:hover {
+  background-color: var(--second-clr);
+}
+
+.btn--lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.btn--full {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+}
+
+/* ── Hlavička ── */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: 64px;
+  background: var(--third-clr);
+}
+
+.logo__img {
+  height: 35px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .header {
+    padding: 0 3rem;
+  }
+}
+
+/* ── Hero sekce ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.55) 100%
+    ),
+    url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a2e;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  max-width: 700px;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.hero__text {
+  font-size: 0.95rem;
+  color: var(--fifth-clr);
+  margin-bottom: 1.25rem;
+}
+
+.hero__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero__input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  background-color: var(--sixth-clr);
+  border: 1px solid var(--sixth-clr);
+  color: var(--fifth-clr);
+  border-radius: 2px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.hero__input::placeholder {
+  color: var(--sixth-clr);
+}
+
+.hero__input:focus {
+  border-color: var(--fifth-clr);
+}
+
+@media (min-width: 600px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__form {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .hero__title {
+    font-size: 3rem;
+  }
+}
+
+/* ── Showcase sekce ── */
+.showcase {
+  background-color: var(--third-clr);
+  padding: 3rem 1rem 4rem;
+  text-align: center;
+}
+
+.showcase__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.showcase__card {
+  width: 60%;
+  max-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.showcase__card:hover {
+  transform: scale(1.04);
+}
+
+.showcase__img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 8px 30px var(--third-clr);
+}
+
+@media (min-width: 700px) {
+  .showcase__grid {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .showcase__card {
+    width: 25%;
+    max-width: none;
+  }
+}
+
+/* ── Patička ── */
+.footer {
+  background-color: var(--third-clr);
+  padding: 3rem 1rem 4rem;
+}
+
+.footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 1rem;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__link {
+  font-size: 0.85rem;
+  color: var(--sixth-clr);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer__link:hover {
+  color: var(--fifth-clr);
+}
+
+@media (min-width: 900px) {
+  .footer__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── Tlačítko „Zpět nahoru" ── */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  z-index: 200;
+  font-size: 2.5rem;
+  color: var(--fifth-clr);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.3s ease,
+    color 0.2s;
+}
+
+.back-to-top:hover {
+  color: var(--first-clr);
+}
+
+.back-to-top--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ── Stránka s filmy ── */
+.movies-page {
+  min-height: 100vh;
+  background-color: var(--third-clr);
+}
+
+.movies-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 1rem 1.5rem;
+}
+
+.movies-select {
+  padding: 0.5rem 2.5rem 0.5rem 0.9rem;
+  font-size: 1rem;
+  background-color: var(--third-clr);
+  color: var(--fifth-clr);
+  border: 1px solid var(--fifth-clr);
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 180px;
+  appearance: auto;
+  transition: border-color 0.2s;
+}
+
+.movies-select:focus {
+  border-color: var(--fifth-clr);
+  outline: none;
+}
+
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.movie-card,
+.movies-grid > div {
+  width: calc(50% - 1rem);
+  max-width: 180px;
+  transition: transform 0.3s ease;
+  transform: rotate(3deg);
+}
+
+.movie-card:hover,
+.movies-grid > div:hover {
+  transform: rotate(0deg) scale(1.06);
+  z-index: 10;
+}
+
+.movie-card__img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px var(--third-clr);
+  display: block;
+  object-fit: cover;
+}
+
+.movie-card__placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--sixth-clr);
+  padding: 0.5rem;
+}
+
+.movies-grid--loading::after {
+  content: "Načítám filmy…";
+  display: block;
+  text-align: center;
+  width: 100%;
+  color: var(--sixth-clr);
+  padding: 2rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+  .movie-card {
+    width: calc(33.333% - 1rem);
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 900px) {
+  .movie-card {
+    width: calc(14.2857% - 1rem);
+    max-width: 220px;
+  }
+}
+
+/* ── Registrační stránka ── */
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-wrapper {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--third-clr);
+  color: var(--fifth-clr);
+  border: 1px solid var(--sixth-clr);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.form-input::placeholder {
+  color: var(--sixth-clr);
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-input--ok {
+  border-color: var(--seventh-clr);
+  border-width: 2px;
+}
+
+.form-input--error {
+  border-color: var(--first-clr);
+  border-width: 2px;
+}
+
+.form-error {
+  display: block;
+  min-height: 1.2em;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: var(--first-clr);
+}
+
+.form-success {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--seventh-clr);
+  padding: 2rem;
+}

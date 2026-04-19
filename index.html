@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix - Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"
+        ><img src="img/netflix-logo.png" alt="Netflix" class="logo__img"
+      /></a>
+      <a href="register.html" class="btn btn--red">Registrace</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Neomezené sledování filmů, TV pořadů a dalšího obsahu
+        </h1>
+        <p class="hero__subtitle">Už od 239 Kč. Zrušte kdykoli.</p>
+        <p class="hero__text">
+          Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte
+          e-mail.
+        </p>
+        <div class="hero__form">
+          <input
+            class="hero__input"
+            type="email"
+            placeholder="E-mailová adresa"
+            aria-label="E-mailová adresa"
+          />
+          <a href="register.html" class="btn btn--red btn--lg">Začít</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <div class="showcase__grid">
+        <div class="showcase__card showcase__card--left">
+          <img
+            src="img/avengers.jpg"
+            alt="Avengers: Infinity War"
+            class="showcase__img"
+          />
+        </div>
+        <div class="showcase__card showcase__card--center">
+          <img
+            src="img/bugs-life.jpeg"
+            alt="A Bug's Life"
+            class="showcase__img"
+          />
+        </div>
+        <div class="showcase__card showcase__card--right">
+          <img src="img/thor.jpeg" alt="Thor" class="showcase__img" />
+        </div>
+      </div>
+      <a href="movies.html" class="btn btn--red showcase__btn"
+        >Najít další filmy</a
+      >
+    </section>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <nav class="footer__grid" aria-label="Patička navigace">
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Často kladené dotazy</a></li>
+            <li><a href="#" class="footer__link">Vztahy s investory</a></li>
+            <li><a href="#" class="footer__link">Jak se dívat</a></li>
+            <li><a href="#" class="footer__link">Podnikové informace</a></li>
+            <li><a href="#" class="footer__link">Právní oznámení</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li>
+              <a href="#" class="footer__link">Centrum zákaznické podpory</a>
+            </li>
+            <li><a href="#" class="footer__link">Kariéra</a></li>
+            <li><a href="#" class="footer__link">Podmínky používání</a></li>
+            <li><a href="#" class="footer__link">Kontaktujte nás</a></li>
+            <li><a href="#" class="footer__link">Uvádí jedině Netflix</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Účet</a></li>
+            <li>
+              <a href="#" class="footer__link">Uplatněte dárkové poukazy</a>
+            </li>
+            <li><a href="#" class="footer__link">Soukromí</a></li>
+            <li><a href="#" class="footer__link">Test rychlosti</a></li>
+            <li><a href="#" class="footer__link">Reklamy</a></li>
+          </ul>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Pro média</a></li>
+            <li><a href="#" class="footer__link">Koupit dárkové poukazy</a></li>
+            <li>
+              <a href="#" class="footer__link">Nastavení souborů cookie</a>
+            </li>
+            <li><a href="#" class="footer__link">Právní záruka</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Zpět na začátek stránky"
+    >
+      <i class="fa-regular fa-circle-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
